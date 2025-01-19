@@ -1,1 +1,25 @@
 theme: jekyll-theme-cayman
+# here is some text
+
+# Sample vulnerable .yml file
+# Hardcoded credentials - Sensitive information should not be directly stored in configuration files
+username: admin
+password: adsaweakpassadsadsword123$%£@asdsa££2
+# Insecure default settings - Security-related settings should be reviewed and configured appropriately
+security:
+encryption: false
+# Encryption should be enabled
+access_control:
+allow_all_ips: true
+# Restrict access to known IP addresses or ranges
+brute_force_protection:
+enabled: false
+# Enable brute force protection
+max_attempts: 10
+# Unsafe dependencies - Always ensure that dependencies are up-to-date and free of known vulnerabilities
+dependencies:
+- name: vulnerable_library
+version: 1.0.0
+vulnerabilities:
+# Use a tool like Dependabot or Snyk to monitor and fix vulnerabilities
+- CVE-2022-XXXX
