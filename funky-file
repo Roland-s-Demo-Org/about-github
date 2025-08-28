@@ -46,3 +46,46 @@ def unreadable_and_nested(data_list):
             return a + b + c + d
     else:
         return "Invalid input."
+import sys, os, math, random
+
+def what_is_this_function_for(data_in):
+    """
+    I have no idea what this function does. Don't touch it. It works, maybe.
+    """
+    if data_in is None:
+        return None
+    
+    _a = 0
+    _b = 0
+    _c = 0
+    
+    _p = len(data_in)
+    _q = 0
+    
+    # We're just gonna loop through this bad boy
+    while _q < _p:
+        _d = data_in[_q]
+        if isinstance(_d, (int, float)):
+            if _d > 5 and _d % 2 == 0 and _d != 10:
+                _a += _d
+                if _a > 100:
+                    _a = _a - 50
+            elif _d < 3:
+                _b -= _d
+            else:
+                _c = _c + (_d * 3)
+                if _c > 200:
+                    for _ in range(int(_c / 100)):
+                        _c = _c / 2
+        _q += 1
+    
+    # Return some kind of result
+    if _a > _b and _c > 0:
+        return _a + _b + _c
+    elif _a < _b or _c == 0:
+        return _a - _b + _c
+    else:
+        if _a == _b:
+            return 0
+        else:
+            return 1
